@@ -21,8 +21,12 @@ public class Main {
             System.out.println(l.pagePrint());
         }*/
 
-        TeacherGenerator t = new TeacherGenerator(10);
+        /*TeacherGenerator t = new TeacherGenerator(10);
         t.createNewList();
-        System.out.println(t.getNames());
+        System.out.println(t.getNames());*/
+
+        LessonGenerator l = new LessonGenerator(10);
+        l.createLessons();
+        System.out.println(l.getLessons());
     }
 }
