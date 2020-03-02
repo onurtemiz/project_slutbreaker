@@ -1,12 +1,20 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Lesson {
     private String name;
-    private List<Teacher> teachers = new ArrayList<Teacher>();
+    private Map<Integer,Teacher> teachers = new HashMap<Integer,Teacher>();
+    private int id;
+    private static int currentId = 0;
 
     public Lesson(String name){
         this.name = name;
+        this.id = createId();
+    }
+
+    public static int createId(){
+        currentId++;
+        return currentId-1;
     }
 
     public String getName(){
@@ -14,11 +22,15 @@ public class Lesson {
     }
 
     public void addTeacher(Teacher teacher){
-        this.teachers.add(teacher);
+        this.teachers.put(teacher.getId(),teacher);
     }
 
-    public void removeTeacher(Teacher teacher){
-        this.teachers.add(teacher);
+
+    public int getId(){
+        return this.id;
     }
 
+    public String toString(){
+        return this.name;
+    }
 }
