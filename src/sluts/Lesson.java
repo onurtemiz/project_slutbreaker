@@ -1,3 +1,5 @@
+package sluts;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -5,7 +7,7 @@ import java.util.Map;
 
 public class Lesson {
     private String name;
-    private Map<Integer,Teacher> teachers = new HashMap<Integer,Teacher>();
+    private Map<Integer, Teacher> teachers = new HashMap<Integer, Teacher>();
     private int id;
     private static int currentId = 0;
     private static List<Lesson> lessons = new ArrayList<Lesson>();
