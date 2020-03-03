@@ -1,6 +1,9 @@
 package generator;
 
 
+import pages.LessonPage;
+import pages.LessonTeacherPage;
+import pages.TeacherPage;
 import sluts.Lesson;
 import sluts.Teacher;
 
@@ -31,13 +34,15 @@ public class FakeRegistration {
         createComponents();
         for (String t : teachers) {
             Teacher k = new Teacher(t);
+            TeacherPage kpage = new TeacherPage(k);
             for (String l : lessons) {
                 double prob = random.nextDouble();
                 if (prob > 0.9) {
                     Lesson s = new Lesson(l);
-
                     k.addLesson(s);
                     s.addTeacher(k);
+                    LessonPage spage = new LessonPage(s);
+                    LessonTeacherPage kspage = new LessonTeacherPage(s,k);
                 }
             }
         }

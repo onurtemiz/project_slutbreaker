@@ -29,6 +29,7 @@ public class Teacher {
         return teachers;
     }
 
+
     public void addLesson(Lesson lesson){
         this.lessons.put(lesson.getId(),lesson);
     }
@@ -50,14 +51,7 @@ public class Teacher {
         return this.name;
     }
 
-    public String pagePrint() {
-        String s = this.name + "\n";
-        s += this.photo + "\n";
-        s += "ID: " + this.id + "\n";
-        s += "Dersler: \n";
-        for (Integer id : lessons.keySet()){
-            s+= lessons.get(id).toString() + "\n";
-        }
-        return s;
+    public String getPhoto(){
+        return this.photo;
     }
 }

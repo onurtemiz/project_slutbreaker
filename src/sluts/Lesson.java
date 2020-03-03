@@ -35,6 +35,10 @@ public class Lesson {
         this.teachers.put(teacher.getId(),teacher);
     }
 
+    public Map<Integer,Teacher> getTeachers(){
+        return this.teachers;
+    }
+
 
     public int getId(){
         return this.id;
@@ -44,14 +48,5 @@ public class Lesson {
         return this.name;
     }
 
-    public String pagePrint(){
-        String s = this.name + "\n";
-        s += "ID: " + this.id + "\n";
-        s += "Teachers: \n";
-        for (Integer id : teachers.keySet()){
-            s+= teachers.get(id).toString() + "\n";
-        }
-        return s;
 
-    }
 }
