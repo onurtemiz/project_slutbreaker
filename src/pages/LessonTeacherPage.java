@@ -11,7 +11,6 @@ public class LessonTeacherPage extends Page{
     private static List<LessonTeacherPage> lessonTeacherPages = new ArrayList<LessonTeacherPage>();
     private Lesson lesson;
     private Teacher teacher;
-    private List<Comment> comments = new ArrayList<Comment>();
 
     public LessonTeacherPage(Lesson l, Teacher t){
         this.lesson = l;
@@ -28,7 +27,7 @@ public class LessonTeacherPage extends Page{
         s += "Ders Ismi:" + this.lesson.getName() + "\n";
         s += "Hoca Ismi:" + this.teacher.getName() + "\n";
         s += "Yorumlar:\n" ;
-        for (Comment c : this.comments){
+        for (Comment c : this.getComments()){
             s+= c;
         }
         return s;

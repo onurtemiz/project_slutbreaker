@@ -1,5 +1,7 @@
 package sluts;
 
+import pages.Page;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,4 +33,9 @@ public class User {
         return name;
     }
 
+    public void comment(Page p, String m){
+        Comment c = new Comment(this,p,m);
+        this.comments.add(c);
+        p.addComment(c);
+    }
 }

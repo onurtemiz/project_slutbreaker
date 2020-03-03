@@ -30,6 +30,7 @@ public class FakeRegistration {
         this.lessons = this.lGenerator.getLessons();
     }
 
+
     public void createRegistration() {
         createComponents();
         for (String t : teachers) {

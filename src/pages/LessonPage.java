@@ -1,7 +1,7 @@
 package pages;
 
 import sluts.Lesson;
-
+import sluts.Comment;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +14,7 @@ public class LessonPage extends Page{
         lessonPages.add(this);
     }
 
+
     public static List<LessonPage> getLessonPages(){
         return lessonPages;
     }
@@ -24,6 +25,9 @@ public class LessonPage extends Page{
         s += "Teachers: \n";
         for (Integer id : this.lesson.getTeachers().keySet()){
             s+= this.lesson.getTeachers().get(id).toString() + "\n";
+        }
+        for (Comment c : this.getComments()){
+            s += c.getMessage() + "\n";
         }
         return s;
     }
