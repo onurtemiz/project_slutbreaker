@@ -7,7 +7,7 @@ import sluts.Teacher;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LessonTeacherPage {
+public class LessonTeacherPage extends Page{
     private static List<LessonTeacherPage> lessonTeacherPages = new ArrayList<LessonTeacherPage>();
     private Lesson lesson;
     private Teacher teacher;
